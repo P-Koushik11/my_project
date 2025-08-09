@@ -1,239 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <a href="index.html">Back to Index</a>
-    <a href="home.html">Home Page</a>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — YourSite</title>
-  <meta name="description" content="Contact page with accessible form, responsive layout and simple validation" />
-
-  <style>
-    /* Reset-ish */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background: linear-gradient(180deg,#0f1724 0%, #071126 100%);
-      color:#e6eef8; -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale; line-height:1.4;
-      display:flex; align-items:center; justify-content:center; padding:48px;
-    }
-
-    .container{
-      width:100%; max-width:1100px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border:1px solid rgba(255,255,255,0.04); border-radius:16px; padding:28px; box-shadow:0 10px 30px rgba(2,6,23,0.7);
-      display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:start;
-      animation:fadeIn 500ms ease both;
-    }
-
-    @media (max-width:920px){
-      .container{grid-template-columns:1fr;}
-    }
-
-    .left{padding:6px 12px}
-    h1{font-size:28px; margin:6px 0 6px; letter-spacing:-0.4px}
-    p.lead{color:rgba(230,238,248,0.85); margin:0 0 18px}
-
-    .info-cards{display:flex; flex-direction:column; gap:12px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.02)}
-    .muted{color:rgba(230,238,248,0.7); font-size:14px}
-
-    /* Form area (right) */
-    form{display:flex; flex-direction:column; gap:12px}
-    label{font-size:13px; color:rgba(230,238,248,0.9); margin-bottom:6px; display:block}
-    .field{display:flex; flex-direction:column}
-    input[type=text], input[type=email], textarea{
-      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); padding:12px 14px; border-radius:8px; color:inherit;
-      font-size:14px; outline:none; transition:box-shadow .18s ease, border-color .18s ease, transform .12s ease;
-      resize:vertical; min-height:44px;
-    }
-
-    input:focus, textarea:focus{box-shadow:0 6px 18px rgba(7,16,30,0.6); transform:translateY(-1px); border-color:rgba(88,125,255,0.95)}
-
-    .row{display:flex; gap:12px}
-    .row .field{flex:1}
-
-    .hint{font-size:13px; color:rgba(230,238,248,0.6)}
-
-    .btn{
-      background:linear-gradient(90deg,#6b8cff,#7dd3fc);
-      color:#071126; border:none; padding:12px 16px; border-radius:10px; font-weight:600; cursor:pointer; font-size:15px;
-      box-shadow:0 6px 20px rgba(107,140,255,0.16), inset 0 -2px 6px rgba(255,255,255,0.06);
-      transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
-    }
-    .btn:active{transform:translateY(1px)}
-
-    .small{font-size:13px}
-
-    .success{background:linear-gradient(90deg,#0ea5a0, #10b981); color:#042022; padding:10px 12px; border-radius:8px; font-weight:600}
-
-    .map{width:100%; height:220px; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.03)}
-
-    /* subtle input icons */
-    .input-wrap{position:relative}
-    .input-icon{position:absolute; right:10px; top:50%; transform:translateY(-50%); opacity:0.65; font-size:12px}
-
-    /* accessibility focus ring for keyboard users */
-    :focus{outline:none}
-    .focus-visible:focus{outline:3px solid rgba(99,102,241,0.22); outline-offset:2px;}
-
-    /* fade-in animation */
-    @keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
-
-    /* subtle floating labels for large screens */
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#7dd3fc,#6b8cff); display:flex; align-items:center; justify-content:center; color:#071126; font-weight:700}
-
-    footer{margin-top:12px; color:rgba(230,238,248,0.55); font-size:13px}
-
-    /* error */
-    .error{color:#ffb4b4; font-size:13px}
-
-    /* small responsive tweaks */
-    @media (max-width:520px){
-      body{padding:22px}
-      .container{padding:18px}
-      .logo{width:40px;height:40px}
-    }
-  </style>
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        nav {
+            background: #1f1f1f;
+            padding: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        .contact-form {
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 50px auto;
+            box-shadow: 0px 4px 15px rgba(255,255,255,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #ff9800;
+            color: black;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #ffa733;
+        }
+    </style>
 </head>
 <body>
-  <main class="container" role="main">
-    <section class="left" aria-labelledby="contact-heading">
-      <div class="brand">
-        <div class="logo">YS</div>
-        <div>
-          <h1 id="contact-heading">Get in touch</h1>
-          <p class="lead">Have a question, project or feedback? Send a message and I'll reply within 1–2 business days.</p>
-        </div>
-      </div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Calculator</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-      <div class="info-cards" style="margin-top:18px">
-        <div class="card">
-          <div class="muted">Email</div>
-          <div style="font-weight:600; margin-top:6px;">hello@yoursite.example</div>
-        </div>
-
-        <div class="card">
-          <div class="muted">Phone</div>
-          <div style="font-weight:600; margin-top:6px;">+1 (555) 123-4567</div>
-        </div>
-
-        <div class="card">
-          <div class="muted">Address</div>
-          <div style="font-weight:600; margin-top:6px;">123 Example Lane, City, Country</div>
-        </div>
-
-      </div>
-
-      <footer>
-        <div class="muted">Prefer social? Find me on Twitter, LinkedIn or GitHub.</div>
-      </footer>
-    </section>
-
-    <aside class="right">
-      <form id="contactForm" novalidate>
-        <!-- Honeypot for bots (invisible) -->
-        <input type="text" name="hp_field" id="hp_field" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <div class="row">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your full name" required aria-required="true" />
-            <div id="nameError" class="error" aria-live="polite"></div>
-          </div>
-          <div class="field">
-            <label for="company">Company (optional)</label>
-            <input id="company" name="company" type="text" placeholder="Company or org" />
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email">Email</label>
-          <div class="input-wrap">
-            <input id="email" name="email" type="email" placeholder="you@example.com" required aria-required="true" />
-            <span class="input-icon">@</span>
-          </div>
-          <div id="emailError" class="error" aria-live="polite"></div>
-        </div>
-
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or question..." required aria-required="true"></textarea>
-          <div id="messageError" class="error" aria-live="polite"></div>
-        </div>
-
-        <div style="display:flex; gap:12px; align-items:center; margin-top:6px;">
-          <button type="submit" class="btn" id="submitBtn">Send message</button>
-          <div id="formStatus" role="status" aria-live="polite"></div>
-        </div>
-
-        <div class="muted small" style="margin-top:10px">By sending this message you agree to our <a href="#" style="color:inherit; text-decoration:underline">privacy policy</a>.</div>
-      </form>
-
-      <!-- Optional map — uncomment and replace src with your own Google Maps embed if desired -->
-      <div style="margin-top:16px" class="map" aria-hidden="true">
-        <!-- Example placeholder. Replace with an iframe embed from Google Maps if you want. -->
-        <div style="display:grid; place-items:center; height:100%; color:rgba(230,238,248,0.45); font-size:14px">Map placeholder (replace with embed)</div>
-      </div>
-    </aside>
-  </main>
-
-  <script>
-    // Small client-side validation + fake submit routine
-    (function(){
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      const submit = document.getElementById('submitBtn');
-
-      function showError(el,msg){
-        el.textContent = msg;
-      }
-      function clearErrors(){
-        ['nameError','emailError','messageError'].forEach(id=>document.getElementById(id).textContent='');
-      }
-
-      function validate(){
-        clearErrors();
-        let valid=true;
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-
-        if(!name){ showError(document.getElementById('nameError'),'Please enter your name.'); valid=false }
-        if(!email){ showError(document.getElementById('emailError'),'Email is required.'); valid=false }
-        else if(!/^\S+@\S+\.\S+$/.test(email)){ showError(document.getElementById('emailError'),'Please enter a valid email address.'); valid=false }
-        if(!message || message.length < 8){ showError(document.getElementById('messageError'),'Message must be at least 8 characters.'); valid=false }
-
-        // Honeypot check
-        if(document.getElementById('hp_field').value){ valid=false; }
-        return valid;
-      }
-
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        status.textContent='';
-        if(!validate()) return;
-
-        // simulate sending
-        submit.disabled = true;
-        submit.style.opacity = 0.85;
-        status.textContent = 'Sending...';
-
-        setTimeout(() => {
-          // In a real site you would POST to your backend here (fetch/XHR)
-          status.innerHTML = '<span class="success">Message sent — thanks! I will reply soon.</span>';
-          submit.disabled = false;
-          form.reset();
-        }, 900);
-      });
-
-      // Accessibility: add keyboard focus-visible class
-      document.addEventListener('keydown', function(e){ if(e.key === 'Tab') document.documentElement.classList.add('using-keyboard'); });
-
-    })();
-  </script>
+    <h1>Contact Us</h1>
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
 </body>
 </html>
